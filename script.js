@@ -1,8 +1,7 @@
-function fibo(n) {
-  const fib = [0, 1];
-  for (i = 2; i < n; i++) {
-    fib[i] = fib[i - 1] + fib[i - 2];
+function recurfact(n) {
+  if (n === 0) {
+    return 1;
   }
-  return fib;
+  return n * recurfact(n - 1);
 }
-console.log(fibo(0));
+console.log(recurfact(5));
